@@ -20,6 +20,11 @@ import org.apache.dubbo.test.check.registrycenter.GlobalRegistryCenter;
 
 import org.junit.platform.launcher.TestPlan;
 
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+
 /**
  * The entrance to terminate the mocked registry center.
  */
@@ -36,5 +41,4 @@ public class RegistryCenterFinished extends AbstractRegistryCenterTestExecutionL
             throw new IllegalStateException("Failed to terminate zookeeper instance in unit test",cause);
         }
     }
-
 }
